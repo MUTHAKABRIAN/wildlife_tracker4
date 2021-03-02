@@ -1,0 +1,20 @@
+body{
+text-align:center;
+font-size: 20px;
+font-weight:3000px;
+}
+
+.form-control{
+background-color:none;
+opacity:0.8;
+}
+.card{
+opacity:0.9;
+background-color:burlywood;
+}
+nav a{
+    color:white;
+}
+form label{
+color:black
+};

@@ -1,11 +1,13 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group 'com.moringa.wildlife_tracker4'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
+mainClassName = "App"
 
 repositories {
     mavenCentral()
@@ -20,3 +22,4 @@ dependencies {
     compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
     compile "com.sparkjava:spark-core:2.6.0"
 }
+apply plugin: 'java'

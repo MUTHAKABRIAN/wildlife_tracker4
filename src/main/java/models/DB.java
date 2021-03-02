@@ -2,7 +2,7 @@ package models;
 import org.sql2o.*;
 
 public class DB {
-  public static Sql2o sql2o = new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker", "moringa", "Access");
+  public static Sql2o sql2o = new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker4", "moringa", "Access");
 
     //
 //    static String connectionString = "jdbc:postgresql://ec2-18-233-207-22.compute-1.amazonaws.com:5432/d8qv515onsd2fo";

@@ -1,0 +1,25 @@
+{{#partial "content"}}
+    <body style="background-image: url('images/pic14.jpg'); background-size:cover; background-repeat:no-repeat;">
+
+    <div>
+        <h3>Holla! Here are the endangered animals! </h3>
+    </div>
+    <div class="col-md-6">
+        {{#each Endangered}}
+            <div class="card"  style="background-image: url('images/'); background-size:cover; background-repeat:no-repeat;">
+                <h3> Endangered Animal: {{ animalName }}</h3>
+                <hr>
+                <p>Health of the Endangered Animals: {{health}}</p>
+                <hr>
+                <p>Age of the Endangered Animals: {{age}}</p>
+                <hr>
+            </div>
+        {{/each}}
+    </div>
+
+    <br>
+    <a class="btn btn-warning" href="/EndangeredForm">Add another Endangered Animal</a>
+    </body>
+{{/partial}}
+
+{{> layout.hbs}}

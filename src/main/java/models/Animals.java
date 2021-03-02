@@ -71,9 +71,9 @@ public class Animals implements DatabaseManagement{
 
     public void save() {
         try (Connection con = DB.sql2o.open()){
-            String sql = "INSERT INTO animals (animalname, type) VALUES (:animalname, :type)";
+            String sql = "INSERT INTO animals (animalName, type) VALUES (:animalName, :type)";
             this.id = (int) con.createQuery(sql,true)
-                    .addParameter("animalname", this.animalName)
+                    .addParameter("animalName", this.animalName)
                     .addParameter("type", this.type)
                     .executeUpdate()
                     .getKey();

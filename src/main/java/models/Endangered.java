@@ -101,10 +101,10 @@ public class Endangered implements DatabaseManagement  {
     }
     public void save() {
         try (Connection con = DB.sql2o.open()){
-            String sql = "INSERT INTO animals (animalname, health, type, age) VALUES (:animalname, :health, :type, :age)";
+            String sql = "INSERT INTO animals (animalName, health, type, age) VALUES (:animalName, :health, :type, :age)";
             this.id = (int) con.createQuery(sql, true)
                     .throwOnMappingFailure(false)
-                    .addParameter("animalname", this.name)
+                    .addParameter("animalName", this.name)
                     .addParameter("health", this.health)
                     .addParameter("type", this.type)
                     .addParameter("age", this.age)

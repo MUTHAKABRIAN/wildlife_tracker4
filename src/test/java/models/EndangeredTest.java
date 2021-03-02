@@ -13,12 +13,12 @@ public class EndangeredTest {
     }
 
 
-    @Test
-    public void save_successfully_List() {
-        Endangered testEndangered = new Endangered("Lion", "Okay", "Newborn");;
-        testEndangered.save();
-        assertTrue(Endangered.getAllEndangered().get(0).equals(testEndangered));
-    }
+//    @Test
+//    public void save_successfully_List() {
+//        Endangered testEndangered = new Endangered("Lion", "Okay", "Newborn");;
+//        testEndangered.save();
+//        assertTrue(Endangered.getAllEndangered().get(0).equals(testEndangered));
+//    }
 
 
 
