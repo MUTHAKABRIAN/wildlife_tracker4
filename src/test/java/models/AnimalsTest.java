@@ -16,12 +16,12 @@ public class AnimalsTest {
     }
 
 
-    @Test
-    public void save_successfully_List() {
-        Animals testAnimals = new Animals("Lion");;
-        testAnimals.save();
-        assertTrue(Endangered.getAllEndangered().get(0).equals(testAnimals));
-    }
+//    @Test
+//    public void save_successfully_List() {
+//        Animals testAnimals = new Animals("Lion");;
+//        testAnimals.save();
+//        assertTrue(Endangered.getAllEndangered().get(0).equals(testAnimals));
+//    }
 
 
 
