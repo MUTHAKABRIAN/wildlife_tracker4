@@ -1,0 +1,25 @@
+{{#partial "content"}}
+    <body style="background-image: url('images/lion-king.jpeg'); background-size:cover; background-repeat:no-repeat;">
+
+    <div>
+        <h1>Sightings </h1>
+    </div>
+    <div class="col-md-6">
+        {{#each Sightings}}
+            <div class="card"  style="background-image: url('images/'); background-size:cover; background-repeat:no-repeat;">
+                <h3>Name of the sighted Animal: {{aniName}}</h3>
+                <hr>
+                <p>Location of the sighted Animal: {{location}}</p>
+                <hr>
+                <p>Name of the Ranger: {{rangerName}}</p>
+                <hr>
+            </div>
+        {{/each}}
+    </div>
+
+    <br>
+    <a class="btn btn-warning" href="/SightingsForm">Add another Sighting</a>
+    </body>
+{{/partial}}
+
+{{> layout.hbs}}
