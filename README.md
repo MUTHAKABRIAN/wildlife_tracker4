@@ -1,5 +1,5 @@
 ### **AUTHOR**
-### Brian Muthaka****
+### **Brian Muthaka**
 
 ### **Description**
 
