@@ -1,0 +1,35 @@
+{{#partial "title"}}
+    <h1>Sightings</h1>
+{{/partial}}
+
+
+
+{{#partial "content"}}
+    <body style="background-image: url('images/pic14.jpg'); background-size:cover; background-repeat:no-repeat;">
+    <form action="/spotted"   method="post" style="color:white;">
+        <div class="form-group">
+            <label for="aniName">Name of the Animal:{{aniName}}</label>
+            <input id="aniName" name="aniName" class="form-control" type="text" required>
+        </div>
+        <div class="form-group">
+            <label for="Location">Location: {{location}}</label>
+            <select id="location" name="location" type="text" class="form-control">
+                <option value=""></option>
+                <option value="Mountain">Mountain</option>
+                <option value="River">River</option>
+                <option value="valley">Valley</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="rangerName">Name of the Ranger:{{rangerName}}</label>
+            <input id="rangerName" name="rangerName" class="form-control" type="text" required>
+        </div>
+
+
+        <button class="btn btn-success" href="/successSight" type="submit"> Submit</button>
+
+    </form>
+    </body>
+{{/partial}}
+
+{{> layout.hbs}}

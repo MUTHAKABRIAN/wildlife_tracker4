@@ -31,6 +31,7 @@ public class Sightings implements DatabaseManagement{
     }
 
     public int getId() {
+
         return id;
     }
 

@@ -1,11 +1,6 @@
-
 import models.Animals;
-import models.DB;
 import models.Endangered;
 import models.Sightings;
-import org.sql2o.Sql2o;
-import spark.Request;
-import spark.Response;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
@@ -13,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static spark.Spark.*;
-import static spark.Spark.staticFileLocation;
+
 
 public class App {
     static int getHerokuAssignedPort() {
@@ -24,9 +19,12 @@ public class App {
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 
-    Sql2o sql2o = new Sql2o ("jdbc:postgresql://localhost:5432/wildlife_tracker", "moringa", "Nya2rango@");
+//    Sql2o sql2o = new Sql2o ("jdbc:postgresql://localhost:5432/wildlife_tracker4", "moringa", "Access");
+//static String connectionString = "jdbc:postgresql://ec2-3-232-163-23.compute-1.amazonaws.com:5432/db7vkhmq0fvd6a";
+//public static Sql2o sql2o = new Sql2o(connectionString, "yreolbfpdgvczq", "77dfecc0285a78264ee3b7fc989e41eaac56fe315c626578f8b3d84942b94c2e");
 
     public static void main(String[] args) {
+
 
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
@@ -46,9 +44,9 @@ public class App {
         post("/addAnimal", (request, response) -> {
 
             Map<String, Object> model = new HashMap<>();
-            String animalName = request.queryParams("animalName");
+            String name = request.queryParams("name");
 
-            Animals animals = new Animals(animalName);
+            Animals animals = new Animals(name);
             animals.save();
             model.put("animals", animals);
             return new ModelAndView(model, "SuccessAnimal.hbs");

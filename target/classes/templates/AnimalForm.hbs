@@ -1,0 +1,24 @@
+{{#partial "title"}}
+    <h4>Add an animal to Jungle World</h4>
+{{/partial}}
+
+{{#partial "content"}}
+    <body style="background-image: url('images/jungle.jpg'); background-size:cover; background-repeat:no-repeat;">
+    <form action="/addAnimal" method="post">
+
+        <div class="form-group">
+            <label for="name">Name of the animal:{{animalName}}</label>
+            <input id="animalName" name="animalName" class="form-control" type="text" required>
+        </div>
+
+        <button class="btn btn-success" href="/SuccessAnimal" type="submit"> Submit</button>
+    </form>
+
+
+    <!--    <a class="btn btn-warning" href="/addAnimal">Add Animal</a>-->
+    </body>
+
+{{/partial}}
+
+
+{{> layout.hbs}}

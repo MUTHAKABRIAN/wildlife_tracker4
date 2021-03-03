@@ -8,14 +8,14 @@ import java.util.Objects;
 
 public class Animals implements DatabaseManagement{
     private int id;
-    private String animalName;
+    private String name;
     public String type;
     private final String DATABASE_TYPE = "animal";
 
 //    private final Sql2o sql2o;
 
-    public Animals( String animalName) {
-        this.animalName = animalName;
+    public Animals( String name) {
+        this.name = name;
         this.setType(DATABASE_TYPE);
 
 //        this.sql2o = sql2o;
@@ -33,13 +33,13 @@ public class Animals implements DatabaseManagement{
         this.type = type;
     }
 
-    public void setAnimalName(String animalName) {
-        this.animalName = animalName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getAnimalName() {
+    public String getName() {
 
-        return animalName;
+        return name;
     }
 
     public static Object all() {
@@ -52,7 +52,7 @@ public class Animals implements DatabaseManagement{
             return false;
         }else{
             Animals newAnimals = (Animals) otherAnimals;
-            return this.getAnimalName().equals(newAnimals.getAnimalName()) &&
+            return this.getName().equals(newAnimals.getName()) &&
                     this.getId() == newAnimals.getId();
         }
     }
@@ -71,9 +71,9 @@ public class Animals implements DatabaseManagement{
 
     public void save() {
         try (Connection con = DB.sql2o.open()){
-            String sql = "INSERT INTO animals (animalName, type) VALUES (:animalName, :type)";
+            String sql = "INSERT INTO animals (name, type) VALUES (:name, :type)";
             this.id = (int) con.createQuery(sql,true)
-                    .addParameter("animalName", this.animalName)
+                    .addParameter("name", this.name)
                     .addParameter("type", this.type)
                     .executeUpdate()
                     .getKey();

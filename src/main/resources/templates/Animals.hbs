@@ -1,25 +1,22 @@
 {{#partial "content"}}
     <body style="background-image: url('images/pic14.jpg'); background-size:cover; background-repeat:no-repeat;">
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                {{#each Animals}}
-                    <h4>Name of the animal: {{animalName}}</h4>
 
-                {{/each}}
+    <div>
+        <h3>Holla! Here are the animals! </h3>
+    </div>
+    <div class="col-md-6">
+        {{#each Animals}}
+            <div class="card"  style="background-image: url('images/'); background-size:cover; background-repeat:no-repeat;">
+                <h3> Animals: {{ name }}</h3>
+                <hr>
+
             </div>
-
-        </div>
-
+        {{/each}}
     </div>
 
-
-
-
-
+    <br>
+    <a class="btn btn-warning" href="/AnimalForm">Add another Animal</a>
     </body>
-
 {{/partial}}
+
 {{> layout.hbs}}

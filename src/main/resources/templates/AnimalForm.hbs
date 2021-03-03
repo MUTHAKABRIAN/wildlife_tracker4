@@ -7,9 +7,13 @@
     <form action="/addAnimal" method="post">
 
         <div class="form-group">
-            <label for="name">Name of the animal:{{animalName}}</label>
-            <input id="animalName" name="animalName" class="form-control" type="text" required>
+            <label for="name">Name of the animal:{{name}}</label>
+            <input id="name" name="name" class="form-control" type="text" required>
         </div>
+<!--        <div class="form-group">-->
+<!--            <label for="name">Type:{{type}}</label>-->
+<!--            <input id="type" name="type" class="form-control" type="text" required>-->
+<!--        </div>-->
 
         <button class="btn btn-success" href="/SuccessAnimal" type="submit"> Submit</button>
     </form>

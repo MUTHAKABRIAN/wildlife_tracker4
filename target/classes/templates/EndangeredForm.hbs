@@ -1,0 +1,40 @@
+{{#partial "title"}}
+    Hello! Report on the Endangered Animal
+{{/partial}}
+
+
+
+{{#partial "content"}}
+    <body style="background-image: url('images/pic14.jpg'); background-size:cover; background-repeat:no-repeat;">
+    <form action="/report"   method="post" style="color:white;">
+        <div class="form-group">
+            <label for="name">Name of the Animal:{{name}}</label>
+            <input id="name" name="name" class="form-control" type="text" required>
+        </div>
+        <div class="form-group">
+            <label for="health">Health: {{health}}</label>
+            <select id="health" name="health" type="text" class="form-control">
+                <option value=""></option>
+                <option value="healthy">Healthy</option>
+                <option value="ill">Ill</option>
+                <option value="okay">Okay</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="age">Age: {{age}}</label>
+            <select id="age" name="age" type="text" class="form-control">
+                <option value=""></option>
+                <option value="Newborn">Newborn</option>
+                <option value="Young">Young</option>
+                <option value="Adult">Adult</option>
+            </select>
+        </div>
+
+
+        <button class="btn btn-success" href="/SuccessDanger" type="submit"> Submit</button>
+
+    </form>
+    </body>
+{{/partial}}
+
+{{> layout.hbs}}

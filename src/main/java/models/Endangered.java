@@ -46,6 +46,7 @@ public class Endangered implements DatabaseManagement  {
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
@@ -54,26 +55,32 @@ public class Endangered implements DatabaseManagement  {
     }
 
     public void setAge(String age) {
+
         this.age = age;
     }
 
     public String getType() {
+
         return type;
     }
 
     public String getName() {
+
         return name;
     }
 
     public String getHealth() {
+
         return health;
     }
 
     public String getAge() {
+
         return age;
     }
 
     public static String getDatabaseType() {
+
         return DATABASE_TYPE;
     }
 
@@ -101,10 +108,10 @@ public class Endangered implements DatabaseManagement  {
     }
     public void save() {
         try (Connection con = DB.sql2o.open()){
-            String sql = "INSERT INTO animals (animalName, health, type, age) VALUES (:animalName, :health, :type, :age)";
+            String sql = "INSERT INTO animals (name, health, type, age) VALUES (:name, :health, :type, :age)";
             this.id = (int) con.createQuery(sql, true)
                     .throwOnMappingFailure(false)
-                    .addParameter("animalName", this.name)
+                    .addParameter("name", this.name)
                     .addParameter("health", this.health)
                     .addParameter("type", this.type)
                     .addParameter("age", this.age)
